@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F8A9B6DE-FD65-438C-AA37-5E7F18AF9FA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YazilimAcademyPayments.WebApi", "src\YazilimAcademyPayments.WebApi\YazilimAcademyPayments.WebApi.csproj", "{75884C0B-B86A-48E5-B61B-374C2B6B2ABD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75884C0B-B86A-48E5-B61B-374C2B6B2ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75884C0B-B86A-48E5-B61B-374C2B6B2ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75884C0B-B86A-48E5-B61B-374C2B6B2ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75884C0B-B86A-48E5-B61B-374C2B6B2ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75884C0B-B86A-48E5-B61B-374C2B6B2ABD} = {F8A9B6DE-FD65-438C-AA37-5E7F18AF9FA0}
+	EndGlobalSection
+EndGlobal
