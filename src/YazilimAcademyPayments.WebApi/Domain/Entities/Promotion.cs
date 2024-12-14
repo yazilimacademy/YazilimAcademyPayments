@@ -10,7 +10,7 @@ public sealed class Promotion : EntityBase
     public string Code { get; set; } // YAZ2024ProGold
     public string Name { get; set; } // 2024 YAZ Ogrenci Indirimi Pro Gold
     public string? Description { get; set; } // Gencler sevinsin iste Alper Hocam.
-    public double DiscountAmount { get; set; } // 50
+    public decimal DiscountAmount { get; set; } // 50
     public DateTimeOffset StartDate { get; set; } // 2024-01-01
     public DateTimeOffset EndDate { get; set; } // 2024-01-31
     public PromotionType Type { get; set; } // Percentage
