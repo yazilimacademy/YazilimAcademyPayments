@@ -5,7 +5,7 @@ namespace YazilimAcademyPayments.WebApi.Domain.Entities;
 
 public sealed class User : EntityBase
 {
-    public Guid TenantId { get; set; }
+    public Guid TenantId { get; set; } // YazilimAcademy, AIBootcamp, BlazorBootcamp
     public Tenant Tenant { get; set; } = null!;
     public string? ExternalUserId { get; set; }
     public Email Email { get; set; }

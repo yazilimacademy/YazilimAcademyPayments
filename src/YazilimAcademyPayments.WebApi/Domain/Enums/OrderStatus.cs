@@ -1,8 +1,8 @@
 namespace YazilimAcademyPayments.WebApi.Domain.Enums;
 
-public enum PaymentStatus
+public enum OrderStatus
 {
     Pending = 1,
-    Completed = 2,
-    Failed = 3
+    Success = 2,
+    Fail = 3
 }
