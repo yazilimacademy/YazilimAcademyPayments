@@ -66,7 +66,7 @@ public sealed class ApiKeyAuthenticationHandler : AuthenticationHandler<Authenti
         var claims = new List<Claim>
         {
             new Claim(ClaimTypes.NameIdentifier, tenantId.ToString()),
-            new Claim("TenantId", tenantId.ToString())
+            new Claim("TenantId", tenantId.ToString()),
         };
 
         var identity = new ClaimsIdentity(claims, Scheme.Name);

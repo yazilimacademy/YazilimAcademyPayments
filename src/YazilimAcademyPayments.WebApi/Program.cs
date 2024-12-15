@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.EntityFrameworkCore;
+using YazilimAcademyPayments.WebApi;
+using YazilimAcademyPayments.WebApi.Persistence.EntityFramework.Contexts;
 using YazilimAcademyPayments.WebApi.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsHistoryTable("__ef_migrations_history"))
+            .UseSnakeCaseNamingConvention();
+});
 
 builder.Services.AddAuthentication(options =>
 {
@@ -22,9 +31,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.InstanceName = "YazilimAcademyPayments_";
 });
 
-builder.Services.Configure<PayTRSettings>(builder.Configuration.GetSection(nameof(PayTRSettings)));
-
-
+// await builder.Services.AddPayTRFromAwsSecretsAsync(builder.Configuration["AWS:SecretsManagerSecretName"], builder.Configuration["AWS:Region"]);
 
 var app = builder.Build();
 
